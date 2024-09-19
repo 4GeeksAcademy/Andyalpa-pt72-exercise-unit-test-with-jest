@@ -11,14 +11,14 @@ const fromEuroToDollar = (valueInEuro) => {
     return valueInDollar;
 }
 const fromDollarToYen = (valueInDollar) => {
-    return (valueInDollar / 1.07) * 156.5 ;
+    return (valueInDollar / 1.07) * oneEuroIs["JPY"];
   };
 
 const fromYenToPound = (valueInYen) => {
-    return (valueInYen / 156.5) * 0.87;
+    return (valueInYen / 156.5) * oneEuroIs["GBP"];
 }
 
-const euroAmount = 100; // Assume 100 Euros
+const euroAmount = 100; 
 const dollarAmount = fromEuroToDollar(euroAmount);
 const yenAmount = fromDollarToYen(dollarAmount);
 const poundAmount = fromYenToPound(10000);
